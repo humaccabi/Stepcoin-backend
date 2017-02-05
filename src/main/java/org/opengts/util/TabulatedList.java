@@ -22,9 +22,11 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.*;
-import java.util.*;
-import java.math.*;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Vector;
 
 public class TabulatedList<KEYTYPE>
 {

@@ -7,4 +7,5 @@ public class LocationEntity {
     public String longitude;
     public String latitude;
     public String address;
+    public Integer userId;
 }

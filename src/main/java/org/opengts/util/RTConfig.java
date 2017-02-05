@@ -66,10 +66,21 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import java.math.*;
+import java.io.File;
+import java.io.IOException;
+import java.math.BigInteger;
+import java.net.InetAddress;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.UnknownHostException;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+import java.util.Stack;
+import java.util.Vector;
 
 /**
 *** Provides static support for hierarchical runtime properties

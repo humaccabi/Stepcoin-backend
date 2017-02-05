@@ -27,12 +27,8 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-import java.io.*;
-
-import java.text.FieldPosition;
-import java.text.SimpleDateFormat;
-import java.text.DateFormat;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
 
 /**
 *** Performs convenience function on a "Day Number"

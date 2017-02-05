@@ -81,13 +81,23 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-import java.io.*;
 //import java.math.BigIngeter;
-
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.DateFormat;
 import java.text.FieldPosition;
 import java.text.SimpleDateFormat;
-import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+import java.util.TimeZone;
+import java.util.Vector;
 
 /**
 *** Performs every manner of function imaginable based on date/time values
@@ -166,7 +176,11 @@ public class DateTime
     public static class DateParseException
         extends Exception
     {
-        public DateParseException(String msg) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		public DateParseException(String msg) {
             super(msg);
         }
         public DateParseException(String msg, Throwable cause) {

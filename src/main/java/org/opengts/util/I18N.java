@@ -47,9 +47,12 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-import java.text.*;
-import java.awt.*;
+import java.text.MessageFormat;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+import java.util.ResourceBundle;
 
 /**
 *** A set of tools for creating i18n compliant code and providing localized text

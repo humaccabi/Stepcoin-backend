@@ -25,10 +25,9 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import javax.net.*;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetAddress;
 
 /**
 *** Remote Log server

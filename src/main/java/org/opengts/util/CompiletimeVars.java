@@ -32,12 +32,13 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-import java.io.*;
-
-import java.text.FieldPosition;
-import java.text.SimpleDateFormat;
-import java.text.DateFormat;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+import java.util.TimeZone;
 
 /**
 *** Create compile-time contant source module
@@ -116,7 +117,12 @@ public class CompiletimeVars
     public static class NoOverwriteException
         extends IOException
     {
-        public NoOverwriteException(String msg) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = -6843788256374573031L;
+
+		public NoOverwriteException(String msg) {
             super(msg);
         }
     }
@@ -425,7 +431,12 @@ public class CompiletimeVars
 
         /* custom map */
         Map<String,String> customMap = new HashMap<String,String>() {
-            @Override
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = -7058355373036289220L;
+
+			@Override
             public String get(Object key) {
                 String ks = StringTools.trim(key);
                 if (ks.toLowerCase().endsWith(".md5")) {

@@ -61,24 +61,34 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-import java.util.regex.Pattern;
-import java.util.regex.PatternSyntaxException;
-
-import java.io.*;
-
-import java.net.URL;
-import java.net.URLConnection;
+import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
 import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.net.UnknownHostException;
-
-import java.lang.reflect.Array;
-
-import java.math.*;
-import java.security.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Vector;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 /**
 *** File handling tools
@@ -2476,7 +2486,7 @@ public class FileTools
     *** Will compile on Java-6, however requires Java-7 for valid results.
     *** Will return null, when running on Java-6
     **/
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     public static Object getAttribute(File file, String attr)
         throws UnsupportedOperationException, 
                IllegalArgumentException, 

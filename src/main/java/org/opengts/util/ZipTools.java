@@ -22,12 +22,12 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.io.*;
-import java.util.*;
-import java.util.jar.*;
-import java.util.zip.*;
-import java.net.*;
-import java.security.cert.Certificate;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.Vector;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 public class ZipTools
 {

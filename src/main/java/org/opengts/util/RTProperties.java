@@ -120,12 +120,26 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.io.*;
-import java.util.*;
-import java.net.URL;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
+import java.lang.reflect.Constructor;
+import java.math.BigInteger;
 import java.net.MalformedURLException;
-import java.lang.reflect.*;
-import java.math.*;
+import java.net.URL;
+import java.util.AbstractCollection;
+import java.util.AbstractSet;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+import java.util.Vector;
 
 /**
 *** Runtime properties container. Supports including other runtime property files.
@@ -3472,7 +3486,11 @@ public class RTProperties
         extends Properties
     {
 
-        private OrderedProperties         parentProps    = null;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private OrderedProperties         parentProps    = null;
         private boolean                   debugMode      = false;
         private int                       recursionLevel = 0;
         private OrderedMap<String,String> orderedMap     = null;

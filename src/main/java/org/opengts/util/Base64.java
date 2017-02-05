@@ -77,7 +77,12 @@ public class Base64
     public static class Base64DecodeException
         extends Exception
     {
-        public Base64DecodeException(String msg) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public Base64DecodeException(String msg) {
             super(msg);
         }
     }

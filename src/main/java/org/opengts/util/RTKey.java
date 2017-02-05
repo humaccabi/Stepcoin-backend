@@ -35,9 +35,10 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.io.*;
-import java.util.*;
-import java.lang.reflect.*;
+import java.io.PrintStream;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 /**
 *** Container for runtime property keys

@@ -58,7 +58,7 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
+import java.util.Locale;
 
 /**
 *** A container for a single latitude/longitude value pair

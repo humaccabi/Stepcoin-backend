@@ -22,8 +22,6 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import org.opengts.util.*;
-
 public interface MACProvider
 {
 

@@ -22,8 +22,8 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.io.*;
-import java.util.*;
+import java.util.Collection;
+import java.util.Vector;
 
 /**
 *** Temperature container

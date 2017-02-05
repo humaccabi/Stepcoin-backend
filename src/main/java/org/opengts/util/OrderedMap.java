@@ -34,7 +34,12 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 /**
 *** <code>OrderedMap</code> provides a HashMap where values can also be retrieved in
@@ -48,7 +53,11 @@ public class OrderedMap<K,V>
 
     // ------------------------------------------------------------------------
 
-    private OrderedSet<K>       keyOrder = null;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private OrderedSet<K>       keyOrder = null;
     private Map<String,String>  ignoredCaseMap = null;
 
     /**

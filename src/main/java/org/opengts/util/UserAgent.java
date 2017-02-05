@@ -27,12 +27,6 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.*;
-import java.util.*;
-import java.io.*;
-import java.awt.*;
-import java.net.*;
-
 /**
 *** User-Agent parser.<br>
 *** Currently only used to check keywords to determine device type (desktop, tablet, mobile, etc)

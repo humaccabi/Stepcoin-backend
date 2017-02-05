@@ -30,7 +30,7 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.io.*;
+import java.io.File;
 
 /**
 *** Checksum tools

@@ -38,7 +38,9 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
+import java.util.Map;
+import java.util.Vector;
+import java.util.WeakHashMap;
 
 /**
 *** Thread pool manager

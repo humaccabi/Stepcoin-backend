@@ -38,7 +38,9 @@ public abstract class GeneratedUserManagerImpl extends AbstractManager<User> imp
             User.PASSWORD,
             User.PHONE_NUMBER,
             User.CREDITS,
-            User.CREATE_TIME
+            User.CREATE_TIME,
+            User.NOTIFICATION_ID,
+            User.NOTIFICATION_TIME
         );
     }
     

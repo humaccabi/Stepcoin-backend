@@ -10,6 +10,7 @@ import com.speedment.runtime.field.StringField;
 import com.speedment.runtime.typemapper.TypeMapper;
 import java.sql.Timestamp;
 import java.util.Optional;
+import java.util.OptionalInt;
 import javax.annotation.Generated;
 
 /**
@@ -72,7 +73,7 @@ public interface GeneratedUser {
      * This Field corresponds to the {@link User} field that can be obtained
      * using the {@link User#getCredits()} method.
      */
-    final StringField<User, String> CREDITS = StringField.create(
+    final ComparableField<User, Integer, Integer> CREDITS = ComparableField.create(
         Identifier.CREDITS,
         o -> OptionalUtil.unwrap(o.getCredits()),
         User::setCredits,
@@ -87,6 +88,28 @@ public interface GeneratedUser {
         Identifier.CREATE_TIME,
         o -> OptionalUtil.unwrap(o.getCreateTime()),
         User::setCreateTime,
+        TypeMapper.identity(), 
+        false
+    );
+    /**
+     * This Field corresponds to the {@link User} field that can be obtained
+     * using the {@link User#getNotificationId()} method.
+     */
+    final StringField<User, String> NOTIFICATION_ID = StringField.create(
+        Identifier.NOTIFICATION_ID,
+        o -> OptionalUtil.unwrap(o.getNotificationId()),
+        User::setNotificationId,
+        TypeMapper.identity(), 
+        false
+    );
+    /**
+     * This Field corresponds to the {@link User} field that can be obtained
+     * using the {@link User#getNotificationTime()} method.
+     */
+    final ComparableField<User, Timestamp, Timestamp> NOTIFICATION_TIME = ComparableField.create(
+        Identifier.NOTIFICATION_TIME,
+        o -> OptionalUtil.unwrap(o.getNotificationTime()),
+        User::setNotificationTime,
         TypeMapper.identity(), 
         false
     );
@@ -129,7 +152,7 @@ public interface GeneratedUser {
      * 
      * @return the credits of this User
      */
-    Optional<String> getCredits();
+    OptionalInt getCredits();
     
     /**
      * Returns the createTime of this User. The createTime field corresponds to
@@ -138,6 +161,22 @@ public interface GeneratedUser {
      * @return the createTime of this User
      */
     Optional<Timestamp> getCreateTime();
+    
+    /**
+     * Returns the notificationId of this User. The notificationId field
+     * corresponds to the database column db.db.user.notificationId.
+     * 
+     * @return the notificationId of this User
+     */
+    Optional<String> getNotificationId();
+    
+    /**
+     * Returns the notificationTime of this User. The notificationTime field
+     * corresponds to the database column db.db.user.notificationTime.
+     * 
+     * @return the notificationTime of this User
+     */
+    Optional<Timestamp> getNotificationTime();
     
     /**
      * Sets the id of this User. The id field corresponds to the database column
@@ -182,7 +221,7 @@ public interface GeneratedUser {
      * @param credits to set of this User
      * @return        this User instance
      */
-    User setCredits(String credits);
+    User setCredits(Integer credits);
     
     /**
      * Sets the createTime of this User. The createTime field corresponds to the
@@ -193,6 +232,24 @@ public interface GeneratedUser {
      */
     User setCreateTime(Timestamp createTime);
     
+    /**
+     * Sets the notificationId of this User. The notificationId field
+     * corresponds to the database column db.db.user.notificationId.
+     * 
+     * @param notificationId to set of this User
+     * @return               this User instance
+     */
+    User setNotificationId(String notificationId);
+    
+    /**
+     * Sets the notificationTime of this User. The notificationTime field
+     * corresponds to the database column db.db.user.notificationTime.
+     * 
+     * @param notificationTime to set of this User
+     * @return                 this User instance
+     */
+    User setNotificationTime(Timestamp notificationTime);
+    
     enum Identifier implements ColumnIdentifier<User> {
         
         ID ("id"),
@@ -200,7 +257,9 @@ public interface GeneratedUser {
         PASSWORD ("password"),
         PHONE_NUMBER ("phoneNumber"),
         CREDITS ("credits"),
-        CREATE_TIME ("createTime");
+        CREATE_TIME ("createTime"),
+        NOTIFICATION_ID ("notificationId"),
+        NOTIFICATION_TIME ("notificationTime");
         
         private final String columnName;
         private final TableIdentifier<User> tableIdentifier;

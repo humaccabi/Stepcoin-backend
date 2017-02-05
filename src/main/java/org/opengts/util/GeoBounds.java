@@ -24,9 +24,7 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-
-import org.opengts.util.*;
+import java.util.Collection;
 
 /**
 *** Represents a set of rectangular latitude/longitude bounds

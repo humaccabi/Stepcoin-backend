@@ -43,8 +43,10 @@ public abstract class GeneratedUserSqlAdapter {
             entity.setEmail(getString(resultSet, 2));
             entity.setPassword(getString(resultSet, 3));
             entity.setPhoneNumber(getString(resultSet, 4));
-            entity.setCredits(getString(resultSet, 5));
+            entity.setCredits(getInt(resultSet, 5));
             entity.setCreateTime(getTimestamp(resultSet, 6));
+            entity.setNotificationId(getString(resultSet, 7));
+            entity.setNotificationTime(getTimestamp(resultSet, 8));
         } catch (final SQLException sqle) {
             throw new SpeedmentException(sqle);
         }

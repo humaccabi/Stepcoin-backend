@@ -24,9 +24,6 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.*;
-import java.util.*;
-
 /**
 *** This class calculates a Fletcher checksum
 **/

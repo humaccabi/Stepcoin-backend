@@ -25,8 +25,8 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.*;
-import java.util.*;
+import java.util.Comparator;
+import java.util.Vector;
 
 /**
 *** Container for an X/Y pair.<br>

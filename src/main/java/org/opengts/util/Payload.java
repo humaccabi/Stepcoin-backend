@@ -71,8 +71,7 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.*;
-import java.util.*;
+import java.util.Random;
 
 /**
 *** For reading/writing binary fields

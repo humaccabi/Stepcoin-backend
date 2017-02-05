@@ -30,10 +30,9 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.io.*;
-import java.util.*;
-import java.awt.*;
-import java.awt.color.*;
+import java.awt.Color;
+import java.awt.color.ColorSpace;
+import java.util.Random;
 
 /**
 *** Color handling and conversion tools

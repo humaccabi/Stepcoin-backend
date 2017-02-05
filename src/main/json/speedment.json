@@ -330,7 +330,7 @@
                 "enabled" : true
               },
               {
-                "expanded" : true,
+                "expanded" : false,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -449,7 +449,7 @@
                     "enabled" : true
                   }
                 ],
-                "expanded" : true,
+                "expanded" : false,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -514,11 +514,12 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "id",
+                    "nullableImplementation" : "OPTIONAL",
                     "ordinalPosition" : 1,
                     "enabled" : true
                   },
@@ -534,7 +535,9 @@
                     "databaseType" : "java.lang.String",
                     "expanded" : true,
                     "nullable" : true,
+                    "autoIncrement" : false,
                     "name" : "name",
+                    "nullableImplementation" : "OPTIONAL",
                     "ordinalPosition" : 3,
                     "enabled" : true
                   },
@@ -549,10 +552,12 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
+                    "autoIncrement" : false,
                     "name" : "location_id",
+                    "nullableImplementation" : "OPTIONAL",
                     "ordinalPosition" : 5,
                     "enabled" : true
                   },
@@ -560,7 +565,9 @@
                     "databaseType" : "java.lang.String",
                     "expanded" : true,
                     "nullable" : true,
+                    "autoIncrement" : false,
                     "name" : "logo",
+                    "nullableImplementation" : "OPTIONAL",
                     "ordinalPosition" : 6,
                     "enabled" : true
                   }
@@ -569,7 +576,7 @@
                 "enabled" : true
               },
               {
-                "expanded" : false,
+                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -639,15 +646,19 @@
                     "databaseType" : "java.lang.String",
                     "expanded" : true,
                     "nullable" : true,
+                    "autoIncrement" : false,
                     "name" : "phoneNumber",
+                    "nullableImplementation" : "OPTIONAL",
                     "ordinalPosition" : 4,
                     "enabled" : true
                   },
                   {
-                    "databaseType" : "java.lang.String",
+                    "databaseType" : "java.lang.Integer",
                     "expanded" : true,
                     "nullable" : true,
+                    "autoIncrement" : false,
                     "name" : "credits",
+                    "nullableImplementation" : "OPTIONAL",
                     "ordinalPosition" : 5,
                     "enabled" : true
                   },
@@ -655,12 +666,156 @@
                     "databaseType" : "java.sql.Timestamp",
                     "expanded" : true,
                     "nullable" : true,
+                    "autoIncrement" : false,
                     "name" : "createTime",
+                    "nullableImplementation" : "OPTIONAL",
                     "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "notificationId",
+                    "ordinalPosition" : 7,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "notificationTime",
+                    "ordinalPosition" : 8,
                     "enabled" : true
                   }
                 ],
                 "name" : "user",
+                "enabled" : true
+              },
+              {
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "db",
+                        "foreignSchemaName" : "db",
+                        "expanded" : true,
+                        "name" : "user_id",
+                        "foreignColumnName" : "id",
+                        "foreignTableName" : "user",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_users_location_user1",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "id",
+                    "ordinalPosition" : 1
+                  },
+                  {
+                    "expanded" : true,
+                    "name" : "user_id",
+                    "ordinalPosition" : 2
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "id",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "user_id",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "fk_users_location_user1_idx",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "user_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "enabled" : true
+                  }
+                ],
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "latitude",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "longitude",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "address",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "timestamp",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "name" : "user_id",
+                    "nullableImplementation" : "OPTIONAL",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "users_location",
                 "enabled" : true
               },
               {

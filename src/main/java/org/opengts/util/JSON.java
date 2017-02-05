@@ -46,10 +46,11 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.File;
+import java.util.Collection;
+import java.util.Vector;
 
 public class JSON
 {
@@ -176,7 +177,11 @@ public class JSON
     public static class JSONParsingException
         extends Exception
     {
-        private int index = 0;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private int index = 0;
         private int line  = 0;
         public JSONParsingException(String msg, JSONParsingContext context) {
             super(msg);
@@ -206,7 +211,11 @@ public class JSON
         extends Vector<JSON._KeyValue>
     {
 
-        private boolean formatIndent = true;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private boolean formatIndent = true;
 
         /**
         *** Constructor
@@ -1441,7 +1450,11 @@ public class JSON
         extends Vector<JSON._Value>
     {
 
-        private boolean formatIndent = true;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private boolean formatIndent = true;
 
         /**
         *** Constructor 

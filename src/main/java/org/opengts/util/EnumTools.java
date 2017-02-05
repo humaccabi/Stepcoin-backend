@@ -29,8 +29,10 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.reflect.*;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Vector;
 
 /**
 *** Contains tools for custom enumerated types.

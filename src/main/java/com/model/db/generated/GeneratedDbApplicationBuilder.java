@@ -13,6 +13,8 @@ import com.model.db.db.db.store.StoreManagerImpl;
 import com.model.db.db.db.store.StoreSqlAdapter;
 import com.model.db.db.db.user.UserManagerImpl;
 import com.model.db.db.db.user.UserSqlAdapter;
+import com.model.db.db.db.users_location.UsersLocationManagerImpl;
+import com.model.db.db.db.users_location.UsersLocationSqlAdapter;
 import com.speedment.common.injector.Injector;
 import com.speedment.runtime.core.internal.AbstractApplicationBuilder;
 import javax.annotation.Generated;
@@ -37,11 +39,13 @@ public abstract class GeneratedDbApplicationBuilder extends AbstractApplicationB
         withManager(LocationManagerImpl.class);
         withManager(StoreManagerImpl.class);
         withManager(UserManagerImpl.class);
+        withManager(UsersLocationManagerImpl.class);
         withComponent(BusinessUserSqlAdapter.class);
         withComponent(CoinSqlAdapter.class);
         withComponent(LocationSqlAdapter.class);
         withComponent(StoreSqlAdapter.class);
         withComponent(UserSqlAdapter.class);
+        withComponent(UsersLocationSqlAdapter.class);
     }
     
     @Override

@@ -24,10 +24,6 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-
-import org.opengts.util.*;
-
 /**
 *** A pixel point in 3D space
 **/

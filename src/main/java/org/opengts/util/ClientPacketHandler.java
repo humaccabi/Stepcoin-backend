@@ -25,8 +25,7 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.net.*;
-import javax.net.*;
+import java.net.InetAddress;
 
 //import javax.net.ssl.*;
 

@@ -6,5 +6,6 @@ import lombok.Data;
 public class UserEntity {
     public String email;
     public String password;
+    public String notificationId;
 
 }

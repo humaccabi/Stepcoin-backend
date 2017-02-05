@@ -25,12 +25,6 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.*;
-import java.util.*;
-import java.io.*;
-import java.awt.*;
-import java.net.*;
-
 /**
 *** Cascading Style Sheet "style" wrapper
 **/

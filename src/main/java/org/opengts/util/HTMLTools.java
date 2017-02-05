@@ -40,11 +40,24 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.*;
-import java.util.*;
-import java.io.*;
-import java.awt.*;
-import java.net.*;
+import java.awt.Color;
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ConnectException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.NoRouteToHostException;
+import java.net.SocketException;
+import java.net.URL;
+import java.net.UnknownHostException;
+import java.util.Enumeration;
+import java.util.Map;
+import java.util.Properties;
 
 /**
 *** Various HTML and HTTP utilities
@@ -148,7 +161,11 @@ public class HTMLTools
     public static class HttpIOException
         extends IOException
     {
-        private int     responseCode    = -1;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = -5193901924209791996L;
+		private int     responseCode    = -1;
         private String  responseMessage = null;
         public HttpIOException(IOException cause, int respCode) {
             super(cause);

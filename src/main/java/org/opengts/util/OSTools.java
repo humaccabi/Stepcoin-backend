@@ -39,16 +39,27 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.reflect.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.lang.instrument.Instrumentation;
-
-import java.util.*;
+import java.lang.reflect.Method;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.UnknownHostException;
+import java.util.Comparator;
+import java.util.Enumeration;
+import java.util.Map;
+import java.util.Vector;
+import java.util.jar.Attributes;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
-import java.util.jar.Attributes;
-
-import java.io.*;
-import java.net.*;
 
 public class OSTools
 {
@@ -1544,7 +1555,7 @@ public class OSTools
     *** @param frame The frame index
     *** @return The calling class
     **/
-    @SuppressWarnings("proprietary")  // <-- does not work to supress the "Sun proprietary API" warning
+    @SuppressWarnings({ "proprietary", "deprecation" })  // <-- does not work to supress the "Sun proprietary API" warning
     private static Class<?> _getCallerClass(int frame)
         throws Throwable
     {
@@ -1905,7 +1916,8 @@ public class OSTools
         String jarCP = null;
         String ATTR_Class_Path = Attributes.Name.CLASS_PATH.toString();
         try {
-            JarFile jarFile = new JarFile(cpJarFile);
+            @SuppressWarnings("resource")
+			JarFile jarFile = new JarFile(cpJarFile);
             Manifest jarMan = jarFile.getManifest();
             if (jarMan != null) {
                 Attributes manAttr = jarMan.getMainAttributes();

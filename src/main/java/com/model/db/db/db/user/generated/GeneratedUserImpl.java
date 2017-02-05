@@ -5,6 +5,7 @@ import com.speedment.runtime.core.util.OptionalUtil;
 import java.sql.Timestamp;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.OptionalInt;
 import java.util.StringJoiner;
 import javax.annotation.Generated;
 
@@ -24,8 +25,10 @@ public abstract class GeneratedUserImpl implements User {
     private String email;
     private String password;
     private String phoneNumber;
-    private String credits;
+    private Integer credits;
     private Timestamp createTime;
+    private String notificationId;
+    private Timestamp notificationTime;
     
     protected GeneratedUserImpl() {
         
@@ -52,13 +55,23 @@ public abstract class GeneratedUserImpl implements User {
     }
     
     @Override
-    public Optional<String> getCredits() {
-        return Optional.ofNullable(credits);
+    public OptionalInt getCredits() {
+        return OptionalUtil.ofNullable(credits);
     }
     
     @Override
     public Optional<Timestamp> getCreateTime() {
         return Optional.ofNullable(createTime);
+    }
+    
+    @Override
+    public Optional<String> getNotificationId() {
+        return Optional.ofNullable(notificationId);
+    }
+    
+    @Override
+    public Optional<Timestamp> getNotificationTime() {
+        return Optional.ofNullable(notificationTime);
     }
     
     @Override
@@ -86,7 +99,7 @@ public abstract class GeneratedUserImpl implements User {
     }
     
     @Override
-    public User setCredits(String credits) {
+    public User setCredits(Integer credits) {
         this.credits = credits;
         return this;
     }
@@ -94,6 +107,18 @@ public abstract class GeneratedUserImpl implements User {
     @Override
     public User setCreateTime(Timestamp createTime) {
         this.createTime = createTime;
+        return this;
+    }
+    
+    @Override
+    public User setNotificationId(String notificationId) {
+        this.notificationId = notificationId;
+        return this;
+    }
+    
+    @Override
+    public User setNotificationTime(Timestamp notificationTime) {
+        this.notificationTime = notificationTime;
         return this;
     }
     
@@ -106,6 +131,8 @@ public abstract class GeneratedUserImpl implements User {
         sj.add("phoneNumber = " + Objects.toString(OptionalUtil.unwrap(getPhoneNumber())));
         sj.add("credits = " + Objects.toString(OptionalUtil.unwrap(getCredits())));
         sj.add("createTime = " + Objects.toString(OptionalUtil.unwrap(getCreateTime())));
+        sj.add("notificationId = " + Objects.toString(OptionalUtil.unwrap(getNotificationId())));
+        sj.add("notificationTime = " + Objects.toString(OptionalUtil.unwrap(getNotificationTime())));
         return "UserImpl " + sj.toString();
     }
     
@@ -120,6 +147,8 @@ public abstract class GeneratedUserImpl implements User {
         if (!Objects.equals(this.getPhoneNumber(), thatUser.getPhoneNumber())) {return false; }
         if (!Objects.equals(this.getCredits(), thatUser.getCredits())) {return false; }
         if (!Objects.equals(this.getCreateTime(), thatUser.getCreateTime())) {return false; }
+        if (!Objects.equals(this.getNotificationId(), thatUser.getNotificationId())) {return false; }
+        if (!Objects.equals(this.getNotificationTime(), thatUser.getNotificationTime())) {return false; }
         return true;
     }
     
@@ -132,6 +161,8 @@ public abstract class GeneratedUserImpl implements User {
         hash = 31 * hash + Objects.hashCode(getPhoneNumber());
         hash = 31 * hash + Objects.hashCode(getCredits());
         hash = 31 * hash + Objects.hashCode(getCreateTime());
+        hash = 31 * hash + Objects.hashCode(getNotificationId());
+        hash = 31 * hash + Objects.hashCode(getNotificationTime());
         return hash;
     }
 }

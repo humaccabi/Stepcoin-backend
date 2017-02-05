@@ -24,8 +24,7 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-import java.io.*;
+import java.util.Vector;
 
 /**
 *** Tree Node

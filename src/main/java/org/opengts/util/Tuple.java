@@ -27,8 +27,6 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-
 /**
 *** <code>Tuple</code> a wrapper class for Tuples
 **/

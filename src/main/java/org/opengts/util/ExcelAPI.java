@@ -22,9 +22,8 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-import java.io.*;
-import java.net.*;
+import java.io.File;
+import java.io.OutputStream;
 
 public interface ExcelAPI
 {

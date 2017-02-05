@@ -27,9 +27,8 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.*;
-import java.util.*;
-import java.math.*;
+import java.util.Locale;
+import java.util.Vector;
 
 /**
 *** Accerometer XYZ-axis container.

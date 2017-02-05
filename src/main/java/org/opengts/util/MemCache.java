@@ -25,11 +25,10 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.*;
-import java.util.*;
-import java.math.*;
-
-import org.opengts.util.*;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Vector;
 
 /**
 *** A simple memory cache handler

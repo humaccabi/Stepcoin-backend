@@ -37,9 +37,9 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-
-import org.opengts.util.*;
+import java.util.Collection;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
 /**
 *** A container for a polygon composed of GeoPoints

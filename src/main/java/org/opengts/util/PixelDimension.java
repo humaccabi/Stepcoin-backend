@@ -22,10 +22,6 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-
-import org.opengts.util.*;
-
 /**
 *** A container for pixel width and height
 **/

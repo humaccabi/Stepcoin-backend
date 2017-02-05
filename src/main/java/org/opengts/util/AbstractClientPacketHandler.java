@@ -31,9 +31,8 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-import java.net.*;
-import javax.net.*;
+import java.net.InetAddress;
+import java.util.TimeZone;
 
 //import javax.net.ssl.*;
 

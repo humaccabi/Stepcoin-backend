@@ -63,7 +63,8 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
+import java.util.Map;
+import java.util.TimeZone;
 
 /**
 *** A container for a NMEA-0183 record

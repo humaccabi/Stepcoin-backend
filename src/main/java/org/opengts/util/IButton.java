@@ -24,9 +24,7 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.*;
-import java.util.*;
-import java.math.*;
+import java.util.Locale;
 
 /**
 *** iButton container

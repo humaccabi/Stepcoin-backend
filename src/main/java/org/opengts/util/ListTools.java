@@ -53,24 +53,24 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.reflect.*;
-import java.util.Map;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.Vector;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.lang.reflect.Array;
+import java.math.BigInteger;
 import java.util.AbstractList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Collection;
-import java.util.Iterator;
-import java.util.Enumeration;
+import java.util.Collections;
 import java.util.Comparator;
-import java.util.Random;
-import java.util.StringTokenizer;
+import java.util.Enumeration;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.NoSuchElementException;
-import java.math.BigInteger;
-import java.io.ByteArrayOutputStream;
-import java.io.ByteArrayInputStream;
+import java.util.Random;
+import java.util.Set;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
 public class ListTools
 {
@@ -761,7 +761,8 @@ public class ListTools
     *** @return The index of the specified element within the specified List, or -1 if
     ***         the specified element was not found in the specified List
     **/
-    public static <T> int indexOf(Collection<T> list, T item)
+    @SuppressWarnings("rawtypes")
+	public static <T> int indexOf(Collection<T> list, T item)
     {
         if (list == null) {
             return -1;

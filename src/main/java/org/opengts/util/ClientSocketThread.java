@@ -22,14 +22,21 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InterruptedIOException;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.net.NoRouteToHostException;
+import java.net.Socket;
+import java.net.SocketException;
+import java.util.Iterator;
+import java.util.Vector;
 
 import javax.net.ssl.SSLSocketFactory;
-
-import org.opengts.util.*;
 
 /**
 *** Threaded messaging socket client

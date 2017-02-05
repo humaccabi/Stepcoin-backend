@@ -22,10 +22,6 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.lang.*;
-import java.util.*;
-import java.math.*;
-
 /**
 *** Accumulator Long container.
 *** Typically used in conditions where it is desireable to pass an accumulator

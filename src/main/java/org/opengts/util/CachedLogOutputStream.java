@@ -25,7 +25,7 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.io.*;
+import java.io.ByteArrayOutputStream;
 
 /**
 *** Cached Logging text OutputStream
@@ -110,15 +110,12 @@ public class CachedLogOutputStream
     public synchronized void write(int b) 
     {
         int len = 1;
-        int ofs = 0;
-
         /* adjust buf */
         int newcount = super.count + len;
         if (newcount > super.buf.length) { // this.maxSize
             // discard oldest log text
             if (len >= this.minSize) {
                 super.count = 0;
-                ofs = len - this.minSize;
                 len = this.minSize;
             } else {
                 int bufLen = this.minSize - len;

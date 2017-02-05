@@ -22,9 +22,7 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.*;
-
-import org.opengts.util.*;
+import java.util.Vector;
 
 public class GeoRoute
     implements Cloneable, GeoPointProvider

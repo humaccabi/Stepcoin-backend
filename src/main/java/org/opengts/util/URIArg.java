@@ -37,12 +37,12 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import java.util.Iterator;
-import java.util.Collection;
-import java.util.Vector;
 import java.math.BigInteger;
-import java.net.URL;
 import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Vector;
 
 /**
 *** URI argument wrapper

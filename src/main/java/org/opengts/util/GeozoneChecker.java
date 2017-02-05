@@ -24,8 +24,6 @@
 // ----------------------------------------------------------------------------
 package org.opengts.util;
 
-import org.opengts.util.*;
-
 /**
 *** Inteface for functions finding if a point is inside of a polygon on a spherical surface
 **/
